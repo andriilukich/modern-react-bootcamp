@@ -9,7 +9,7 @@ class Rando extends Component {
 
   makeTimer() {
     setInterval(() => {
-      let rand = Math.floor(Math.random() * this.props.maxNum);
+      let rand = Math.floor(Math.random( ) * this.props.maxNum);
       this.setState({ num: rand });
     }, 1000);
   }
