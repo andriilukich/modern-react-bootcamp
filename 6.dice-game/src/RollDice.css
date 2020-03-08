@@ -1,0 +1,31 @@
+.RollDice {
+  display: flex;
+  flex-direction: column;
+}
+
+.RollDice__container {
+  display: flex;
+  justify-content: center;
+}
+
+.RollDice__container i:nth-last-child(n+2) {
+  margin-right: 30px;
+}
+
+.RollDice__btn {
+  align-self: center;
+  width: 15em;
+  margin-top: 3em;
+  padding: 1.5em;
+
+  font-size: 20px;
+  color: #fff;
+  border: 0px;
+  border-radius: 10px;
+  background-color: black;;
+}
+
+.RollDice__btn:hover {
+  background-color: #7B6CD3;
+  cursor: pointer;
+}
