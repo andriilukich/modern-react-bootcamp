@@ -1,11 +1,12 @@
 import React from 'react';
-import CkickKiller from './CkickKiller';
+// import CkickKiller from './CkickKiller';
+import IconList from './IconList';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <CkickKiller />
+      <IconList />
     </div>
   );
 }
