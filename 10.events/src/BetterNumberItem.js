@@ -3,10 +3,10 @@ import React, { Component } from 'react'
 class BetterNumberItem extends Component {
   constructor(props) {
     super(props);
-    this.onBtnClick = this.onBtnClick.bind(this);
+    this.handleRemove = this.handleRemove.bind(this);
   }
 
-  onBtnClick(evt) {
+  handleRemove(evt) {
     this.props.remove(this.props.value);
   }
 
