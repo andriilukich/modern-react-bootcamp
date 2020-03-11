@@ -4,7 +4,7 @@ import BetterNumberItem from './NumberItem';
 class BetterNumberList extends Component {
   constructor(props) {
     super(props);
-    this.state = { num: [1, 2, 3, 4, 5]};
+    this.state = { num: [1, 2, 3, 4, 5] };
     this.remove = this.remove.bind(this);
   }
 
@@ -14,7 +14,7 @@ class BetterNumberList extends Component {
     }));
   }
   render() {
-    let nums = this.state.num.map(n => <NumberItem value={n} remove={this.remove}/>);
+    let nums = this.state.num.map( (n, indx) => <NumberItem key={indx} value={n} remove={this.remove}/>);
     return (
       <div>
         <h1>First Number liset</h1>
