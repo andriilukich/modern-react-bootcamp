@@ -1,11 +1,11 @@
 import React from 'react';
-import DemoForm from './DemoForm';
+import ShoppingList from './ShoppingList';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <DemoForm />
+      <ShoppingList />
     </div>
   );
 }
