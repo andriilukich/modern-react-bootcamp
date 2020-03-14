@@ -3,18 +3,20 @@ import React, { Component } from 'react';
 class DemoForm extends Component {
   constructor(props) {
     super(props);
-    this.state = { value: "" };
+    this.state = { username: "", email: "", password: "" };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(evt) {
-    this.setState({value: evt.target.value});
+    this.setState({
+      [evt.target.name]: evt.target.value
+    });
   }
 
   handleSubmit(evt){
     evt.preventDefault();
-    alert(`You tipe in: ${this.state.value}`);
+    alert(`You tipe in: ${this.state.username}`);
     this.setState({value: ''});
   }
 
@@ -25,8 +27,21 @@ class DemoForm extends Component {
         <form onSubmit={this.handleSubmit}>
           <input 
             type="text"
+            name="username"
             onChange={this.handleChange}
-            value={this.state.value}
+            value={this.state.username}
+          />
+          <input 
+            type="email"
+            name="email"
+            onChange={this.handleChange}
+            value={this.state.email}
+          />
+          <input 
+            type="password"
+            name="password"
+            onChange={this.handleChange}
+            value={this.state.password}
           />
           <button>Submit</button>
         </form>
