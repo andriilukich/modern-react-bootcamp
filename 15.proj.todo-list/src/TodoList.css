@@ -1,0 +1,26 @@
+.TodoList {
+  max-width: 500px;
+  margin: 3rem auto;
+  padding: 2rem 3rem 3rem;
+
+  color: #ffffff;
+  background-color: #ff6666;
+  box-shadow: -20px -20px 0 0 rgba(100, 100, 100, 0.1);
+}
+
+.TodoList__list {
+  margin-top: 2rem;
+  list-style: none;
+}
+
+.TodoList__title {
+  font-weight: normal;
+  font-size: 2.6rem;
+  letter-spacing: 0.05em;
+}
+
+.TodoList__sub-title {
+  margin: 0.2rem 0 0.7rem 3px;
+  font-size: 0.8rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
