@@ -10,6 +10,8 @@ class App extends Component {
     return(
       <div className="App">
         <Route path="/dog" component={Dog} />
+        <Route path="/about" component={About} />
+        <Route path="/contacts" component={Contacts} />
       </div>
     )
   }
