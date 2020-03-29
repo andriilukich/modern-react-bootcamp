@@ -2,21 +2,23 @@ import React, { Component } from 'react';
 import About from './About';
 import Dog from './Dog';
 import Contacts from './Contacts';
-import { Route, Switch, Link } from 'react-router-dom';
+import { Route, Switch, NavLink } from 'react-router-dom';
 import './App.css';
-
+ 
 class App extends Component {
   render() {
     return(
       <div className="App">
         <nav>
-          <Link to='/' >About</Link>
-          <Link to='/dog' >Dog</Link>
-          <Link to='/contacts'>Contacts</Link>
-
-          <a href="/">about</a>
-          <a href="/dog">dog</a>
-          <a href="/contact">contacts</a>
+          <NavLink exact activeClassName="active-link" to='/' >
+            About
+          </NavLink> 
+          <NavLink exact activeClassName="active-link" to='/dog' >
+            Dog
+          </NavLink>
+          <NavLink exact activeClassName="active-link" to='/contacts'>
+            Contacts
+          </NavLink>
         </nav>
         <Switch> 
           <Route exact path="/" component={About} />
