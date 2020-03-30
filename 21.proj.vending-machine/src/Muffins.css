@@ -1,0 +1,18 @@
+.Muffins {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+
+  background-image: url('https://images.unsplash.com/photo-1488045212212-a5b5b0f8d3fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.Muffins h1 {
+  text-transform: uppercase;
+  color: #333;
+}
