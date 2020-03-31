@@ -1,21 +1,26 @@
 import React from 'react';
 import Picture from './Picture';
 import Animal from './Animal';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Route 
-        exact
-        path='/picture/:name'
-        render={(routerProps) => <Picture {...routerProps} />}
-      />
-      <Route 
-        path='/picture/:pictureName/animal/:animalName'
-        component={Animal} 
-      />
+      <Switch>
+        <Route 
+          exact
+          path='/picture/:name'
+          render={(routerProps) => <Picture {...routerProps} />}
+        />
+        <Route 
+          exact
+          path='/picture/:pictureName/animal/:animalName'
+          component={Animal} 
+        />
+        <Route exact path='/' render={() => <h1>Home page</h1>} />
+        <Route render={() => <h1>ERROR NOT FOUND!</h1>} />
+      </Switch>
     </div>
   );
 }
