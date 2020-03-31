@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 
 class Picture extends Component {
-    render() {
-      const name = this.props.match.params.name;
-      const API_URL = `https://source.unsplash.com/1600x900/?${name}`;
-      return (
-        <div className='Picture'>
-          {/\d/.test(name) ? <Redirect to='/'/> : (
+  render() {
+    const name = this.props.match.params.name;
+    const API_URL = `https://source.unsplash.com/1600x900/?${name}`;
+    return (
+      <div className='Picture'>
+        {/\d/.test(name) ? (
+          <Redirect to='/' />
+        ) : (
             <div>
               <h1>This picture is about: {name}</h1>
               <img src={API_URL} alt={name} style={{
@@ -16,12 +18,12 @@ class Picture extends Component {
                 backgroundRepeat: 'no-repeat',
                 width: 'auto',
                 height: '100vh'
-              }}/>
+              }} />
             </div>
           )}
-        </div>
-      )
-    }
+      </div>
+    )
   }
+}
 
 export default Picture;

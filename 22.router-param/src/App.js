@@ -19,7 +19,12 @@ function App() {
           path='/picture/:pictureName/animal/:animalName'
           component={Animal} 
         />
-        <Route exact path='/' render={() => <PictureSearch/>} />
+        <Route
+          exact
+          path='/'
+          //render={(routerProps) => <PictureSearch {...routerProps} />}
+          component={PictureSearch}
+        />
         <Route render={() => <h1>ERROR NOT FOUND!</h1>} />
       </Switch>
     </div>

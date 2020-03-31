@@ -6,13 +6,18 @@ class PictureSearch extends Component {
       super(props);
       this.state = { query: '' };
       this.handelChange = this.handelChange.bind(this);
+      this.handelClick = this.handelClick.bind(this);
     }
 
     handelChange(evt) {
-      console.log(evt.target.value);
       this.setState({
         [evt.target.name]: evt.target.value
       });
+    }
+
+    handelClick() {
+      alert('save to your DB!');
+      this.props.history.push(`/picture/${this.state.query}`);
     }
 
     render() {
@@ -28,6 +33,7 @@ class PictureSearch extends Component {
             onChange={this.handelChange}
           />
           <Link to={`/picture/${this.state.query}`}>search</Link>
+          <button onClick={this.handelClick}>Go&Save to DB!</button>
         </div>
       )
     }
