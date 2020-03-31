@@ -2,12 +2,14 @@ import React from 'react';
 import Picture from './Picture';
 import Animal from './Animal';
 import PictureSearch from './PictureSearch';
+import NavBar from './NavBar';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
+      <NavBar />
       <Switch>
         <Route 
           exact
