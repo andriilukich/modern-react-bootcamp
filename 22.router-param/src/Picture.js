@@ -4,11 +4,13 @@ import { Redirect } from 'react-router-dom';
 class Picture extends Component {
   render() {
     const name = this.props.match.params.name;
+    if (/\d/.test(name)) this.props.history.push('/notfound')
     const API_URL = `https://source.unsplash.com/1600x900/?${name}`;
     return (
       <div className='Picture'>
         {/\d/.test(name) ? (
           <Redirect to='/' />
+          console.log('it in the middle');
         ) : (
             <div>
               <h1>This picture is about: {name}</h1>
